@@ -65,7 +65,7 @@ function eventFunction(e) {
         }
 
         if (e.target.textContent === "Edit") {
-           editedCard = e.target.closest(".cardContainer");
+            editedCard = e.target.closest(".cardContainer");
 
 
             const existingPopup = document.querySelector(".popupContainer");
@@ -89,7 +89,7 @@ function eventFunction(e) {
             const popupForm = e.target.closest(".popupForm");
 
             editedCard.querySelector(".Mrp").innerText = `MRP: ${popupForm.children[0].value}`;
-            editedCard.querySelector(".ProductName").innerText = `Name :${popupForm.children[1].value}`;
+            editedCard.querySelector(".ProductName").innerText = `Product Name :${popupForm.children[1].value}`;
             editedCard.querySelector(".price").innerText = `Price: only ${popupForm.children[2].value}`;
             editedCard.querySelector(".ProductQuantity").innerText = `Quantity : ${popupForm.children[3].value}`;
 
