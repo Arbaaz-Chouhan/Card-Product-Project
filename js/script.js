@@ -5,6 +5,7 @@ const productName = AddCreatElement("input", "type", "text", form, null, "Produc
 const productPrice = AddCreatElement("input", "type", "number", form, null, "ProductPrice");
 const productQuantity = AddCreatElement("input", "type", "number", form, null, "productQuantity");
 const formSubmit = AddCreatElement("button", "class", "mainSumbit", form, "Sumbit", null, "Submit");
+const ProductCardContainer = AddCreatElement("div", "class", "ProductCardContainer", mainContainer);
 
 function AddCreatElement(tag, attType, attName, parent, text, placeholder, value) {
     const element = document.createElement(tag);
@@ -48,7 +49,7 @@ function eventFunction(e) {
         }
 
         if (e.target.value === "Submit") {
-            const productContainer = AddCreatElement("div", "class", "productContainer", mainContainer);
+            const productContainer = AddCreatElement("div", "class", "productContainer", ProductCardContainer);
             const Card = AddCreatElement("div", "class", "cardContainer", productContainer);
             const Mrp = AddCreatElement("h3", "class", "Mrp", Card, `MRP : ${MRP.value}`);
             const name1 = AddCreatElement("h3", "class", "ProductName", Card, `Product Name : ${productName.value}`);

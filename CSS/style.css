@@ -1,23 +1,37 @@
 body {
-   background-color:indianred;
+    background-color: indianred;
 }
-
-
-
 
 .myform {
     margin-bottom: 20px;
 }
 
-.productContainer {
-    border: 2px solid rgba(0, 0, 0, 0.667);
-    width: 300px;
-    margin-top: 10px;
-    border-radius: 10px;
-    word-wrap: break-word;
+.ProductCardContainer {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 350px);
+    gap: 40px;
+    margin: 20px auto;
+    padding: 10px;
 }
 
-.cardContainer{
+.productContainer {
+    border: 2px solid rgba(0, 0, 0, 0.667);
+    border-radius: 10px;
+    width: 300px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.productContainer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cardContainer {
     margin-left: 10px;
 }
 
@@ -74,8 +88,8 @@ body {
     color: white;
     font-size: 14px;
     transition: background-color 0.3s;
-   margin: 0 50px;
-   
+    margin: 0 50px;
+
 }
 
 .popupSubmitBtn:hover {
@@ -92,6 +106,6 @@ body {
 }
 
 
-.closeBtn:hover{
-    background-color:gray;
+.closeBtn:hover {
+    background-color: gray;
 }
